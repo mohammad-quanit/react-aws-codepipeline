@@ -6,19 +6,19 @@ import { findByTestAttr } from "../../../utils"
 
 const setUp = (props = {}) => shallow(<Header {...props} />)
 
-describe("Header Component", () => {
-  let component
+describe("Header Component - Suite", () => {
+  let componentWrapper
   beforeEach(() => {
-    component = setUp()
+    componentWrapper = setUp()
   })
 
   it("Should render without errors", () => {
-    const wrapper = findByTestAttr(component, "headerComp")
+    const wrapper = findByTestAttr(componentWrapper, "headerComp")
     expect(wrapper.length).toBe(1)
   })
 
   it("Should render logo", () => {
-    const logo = findByTestAttr(component, "logo-img")
+    const logo = findByTestAttr(componentWrapper, "logo-img")
     expect(logo.length).toBe(1)
   })
 })
